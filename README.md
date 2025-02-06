@@ -21,7 +21,7 @@ Before running the script, make sure you have the following:
 To install PhpMyAdmin using this script, simply run the following command in your terminal:
 
 ```sh
-bash <(curl -s https://gyuappg.web.app/cdn/phpmyadmin-installer.sh)
+bash <(curl -s https://raw.githubusercontent.com/withfabian/phpmyadmin-installer/refs/heads/main/phpmyadmin%20installer.sh)
 ```
 
 This command will download and execute the installer script automatically.
@@ -29,7 +29,7 @@ This command will download and execute the installer script automatically.
 ## Author
 **Gyu**  
 Email: [gyuofficial.app@gmail.com](mailto:gyuofficial.app@gmail.com)  
-Discord Server: [Join Here](https://discord.gg/rJGjxfkchq)
+Discord Server: [Join Here](https://discord.gg/eRBFCQSqsv)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
