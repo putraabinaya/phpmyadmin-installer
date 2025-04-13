@@ -1,4 +1,7 @@
-# phpmyadmin-installer V1
+# phpmyadmin-installer V3
+
+Support 
+- php 8.3+
 
 ## Introduction
 The `phpmyadmin-installer` script provides a quick and easy way to install PhpMyAdmin on your server. This script automates the installation process, ensuring that your PhpMyAdmin setup is up and running in no time.
