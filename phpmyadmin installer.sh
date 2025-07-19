@@ -17,8 +17,8 @@ echo "=================================================="
 echo -e "${NC}"
 
 # Prompt Input
-read -p "👤 Masukkan username database MySQL: " DBUSER
-read -p "🔑 Masukkan password untuk user MySQL [$DBUSER]: " DBPASS
+read -r "👤 Masukkan username database MySQL: " DBUSER
+read -r "🔑 Masukkan password untuk user MySQL [$DBUSER]: " DBPASS
 
 echo -e "\n${YELLOW}========================================"
 echo "🔧 Mulai Proses Instalasi phpMyAdmin..."
@@ -26,11 +26,6 @@ echo "👤 DB User    : $DBUSER"
 echo "🔐 DB Password: $DBPASS"
 echo "========================================${NC}\n"
 sleep 2
-
-# Step 1: Update dan Install Paket
-echo -e "${CYAN}📦 Menginstal dependensi...${NC}"
-sudo apt update
-sudo apt install -y wget unzip nginx php php-fpm php-mysql mariadb-server certbot > /dev/null
 
 # Step 2: Unduh dan Ekstrak phpMyAdmin
 echo -e "${CYAN}📥 Mengunduh phpMyAdmin...${NC}"
