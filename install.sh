@@ -11,14 +11,14 @@ NC='\033[0m' # No Color
 clear
 echo -e "${CYAN}"
 echo "=================================================="
-echo "          🚀 AUTO INSTALL PHPMYADMIN v5.2.1       "
+echo "          🚀 AUTO INSTALL PHPMYADMIN v5.2.2       "
 echo "           by SkyNest Cloud - Bash Script          "
 echo "=================================================="
 echo -e "${NC}"
 
 # Prompt Input
-read -r "👤 Masukkan username database MySQL: " DBUSER
-read -r "🔑 Masukkan password untuk user MySQL [$DBUSER]: " DBPASS
+read -p "👤 Masukkan username database MySQL: " DBUSER
+read -p "🔑 Masukkan password untuk user MySQL [$DBUSER]: " DBPASS
 
 echo -e "\n${YELLOW}========================================"
 echo "🔧 Mulai Proses Instalasi phpMyAdmin..."
@@ -44,7 +44,6 @@ BLOWFISH=$(openssl rand -base64 32)
 sed -i "s|\['blowfish_secret'\] = ''|['blowfish_secret'] = '$BLOWFISH'|g" config.inc.php
 echo "\$cfg['TempDir'] = '/tmp';" >> config.inc.php
 
-
 # Step 6: Setup Database
 echo -e "${CYAN}🗄️  Konfigurasi MySQL...${NC}"
 sudo mysql -u root <<MYSQL_SCRIPT
@@ -56,7 +55,7 @@ MYSQL_SCRIPT
 # Step 7: Remote Access MySQL
 echo -e "${CYAN}🔓 Membuka akses remote MySQL...${NC}"
 sudo sed -i "s/^bind-address\s*=.*/bind-address = 0.0.0.0/" /etc/mysql/mariadb.conf.d/50-server.cnf
-sudo systemctl restart mysql mariadb
+sudo systemctl restart mysql
 
 # DONE
 echo -e "\n${GREEN}✅ Instalasi Selesai!${NC}"
